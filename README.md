@@ -11,7 +11,7 @@ Smart contract ini dijalankan pada local blockchain Hardhat dan dapat dihubungka
 
 | Nama | NRP |
 |---|---|
-| Haris | 5006231028 |
+| Muhammad Harisul Haq | 5006231028 |
 
 ---
 
