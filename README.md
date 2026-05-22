@@ -205,7 +205,6 @@ Setelah voting dilakukan, hasil vote berhasil berubah dan dapat diverifikasi men
 ![State Verification](image/Gambar5.png)
 
 *Gambar 8. Verifikasi perubahan state smart contract setelah voting.*
-# Contract Address
 
 ### f. Validasi Double Voting
 
@@ -216,6 +215,9 @@ Hal ini membuktikan bahwa mekanisme keamanan one vote per wallet berjalan dengan
 ![Double Voting Validation](image/Gambar6.png)
 
 *Gambar 9. Validasi gagal voting kedua karena user sudah pernah melakukan vote sebelumnya.*
+
+# Contract Address
+
 ```text
 Contract deployed to:
 0x5fbdb2315678afecb367f032d93f642f64180aa3
