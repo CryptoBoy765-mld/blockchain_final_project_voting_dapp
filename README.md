@@ -9,9 +9,10 @@ Smart contract ini dijalankan pada local blockchain Hardhat dan dapat dihubungka
 
 
 
-| Nama | NRP |
-|---|---|
-| Muhammad Harisul Haq | 5006231028 |
+| Nama | NRP | Job Desc |
+|---|---|---|
+| Michael Laurence Djie | 5006231001 | Deployment, MetaMask Integration & Documentation |
+| Muhammad Harisul Haq | 5006231028 | Smart Contract Developer & Testing |
 
 ---
 
