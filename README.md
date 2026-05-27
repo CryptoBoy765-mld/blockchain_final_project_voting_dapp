@@ -11,8 +11,9 @@ Smart contract ini dijalankan pada local blockchain Hardhat dan dapat dihubungka
 
 | Nama | NRP | Job Desc |
 |---|---|---|
-| Michael Laurence Djie | 5006231001 | Deployment, MetaMask Integration & Documentation |
+| Michael Laurence Djie | 5006231001 | Deployment, MetaMask Integration |
 | Muhammad Harisul Haq | 5006231028 | Smart Contract Developer & Testing |
+| Evand Khan | 5006231003 | Documentation |
 
 ---
 
@@ -112,10 +113,11 @@ Seluruh fitur smart contract telah berhasil diuji menggunakan Hardhat testing fr
 6. Should emit CandidateAdded event
 7. Should emit Voted event
 8. Should return candidate count
+9. Should reject non-owner adding candidate
 
 ![Testing](image/Gambar8.png)
 
-*Gambar 2. Hasil unit testing Hardhat (8 passing).*
+*Gambar 2. Hasil unit testing Hardhat (9 passing).*
 
 ---
 
@@ -158,9 +160,31 @@ MetaMask berhasil dihubungkan ke jaringan Hardhat Local Network menggunakan RPC 
 ![MetaMask](image/Gambar12.png)
 
 *Gambar 5. MetaMask berhasil terhubung ke Hardhat Local Network.*
+## 6. Test Coverage & Branch Coverage
+
+Pengujian smart contract juga dilakukan menggunakan `solidity-coverage` untuk mengukur tingkat cakupan pengujian terhadap seluruh kode program smart contract.
+
+Pengujian ini memastikan bahwa:
+- seluruh function berhasil diuji,
+- seluruh statement Solidity berhasil dieksekusi,
+- seluruh line code berhasil tercakup,
+- serta sebagian besar branch condition (`require` dan validasi kondisi) telah diuji dengan baik.
+
+Hasil coverage menunjukkan:
+- **Statements Coverage:** 100%
+- **Branch Coverage:** 90%
+- **Functions Coverage:** 100%
+- **Lines Coverage:** 100%
+
+Nilai branch coverage berhasil mencapai **90%**, yang menunjukkan bahwa hampir seluruh percabangan logika dan validasi kondisi pada smart contract telah berhasil diuji secara menyeluruh.
+
+![Coverage Result](image/Gambar13.png)
+
+*Gambar 6. Hasil solidity coverage dengan branch coverage sebesar 90%.*
 
 ---
-## 6. Deployment & Interaksi Menggunakan Remix IDE
+---
+## 7. Deployment & Interaksi Menggunakan Remix IDE
 
 Selain menggunakan Hardhat Local Network, smart contract juga berhasil diuji menggunakan Remix IDE untuk memastikan kontrak dapat diinteraksikan langsung melalui antarmuka blockchain berbasis web.
 
@@ -185,7 +209,7 @@ Owner berhasil menambahkan kandidat voting menggunakan fungsi `addCandidate`.
 
 ![Add Candidate](image/Gambar1.png)
 
-*Gambar 6. Penambahan kandidat voting berhasil dilakukan.*
+*Gambar 7. Penambahan kandidat voting berhasil dilakukan.*
 
 ---
 
@@ -195,7 +219,7 @@ User berhasil melakukan voting terhadap kandidat yang tersedia menggunakan fungs
 
 ![Voting Transaction](image/Gambar3.png)
 
-*Gambar 7. Transaksi voting berhasil dilakukan.*
+*Gambar 8. Transaksi voting berhasil dilakukan.*
 
 ---
 
@@ -205,7 +229,7 @@ Setelah voting dilakukan, hasil vote berhasil berubah dan dapat diverifikasi men
 
 ![State Verification](image/Gambar5.png)
 
-*Gambar 8. Verifikasi perubahan state smart contract setelah voting.*
+*Gambar 9. Verifikasi perubahan state smart contract setelah voting.*
 
 ### f. Validasi Double Voting
 
@@ -215,7 +239,7 @@ Hal ini membuktikan bahwa mekanisme keamanan one vote per wallet berjalan dengan
 
 ![Double Voting Validation](image/Gambar6.png)
 
-*Gambar 9. Validasi gagal voting kedua karena user sudah pernah melakukan vote sebelumnya.*
+*Gambar 10. Validasi gagal voting kedua karena user sudah pernah melakukan vote sebelumnya.*
 
 # Contract Address
 

@@ -119,4 +119,16 @@ describe("SimpleVoting", function () {
       ).to.equal(2);
   });
 
+  it("Should reject non-owner adding candidate",
+  async function () {
+
+    await expect(
+      voting
+        .connect(voter1)
+        .addCandidate("Bob")
+    ).to.be.revertedWith(
+      "Not owner"
+    );
+  });
+
 });
